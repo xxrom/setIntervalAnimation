@@ -1,0 +1,30 @@
+<!DOCTYPE>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title>
+    set interval animation
+  </title>
+</head>
+<h1 id="move">=> moving =></h1>
+<script>
+  var leftPadding = 0;
+  var add = 1;
+
+  var moveFunction = function () {
+    var h1 = document.getElementById('move');
+    if (
+      leftPadding > 100
+      || leftPadding < 0
+    ) {
+      add *= -1;
+    }
+    leftPadding += add;
+    h1.style = 'padding-left: ' + leftPadding;
+  }
+
+  setInterval(moveFunction, 20);
+</script>
+
+</html>
